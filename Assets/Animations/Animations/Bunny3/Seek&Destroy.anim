@@ -566,21 +566,21 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0
-    functionName: CycleSound
+    functionName: PlaySound
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.2666667
-    functionName: fenceCrash
+    functionName: Crash
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3.9166667
-    functionName: lettuceCrash
+  - time: 5.9166665
+    functionName: Finish
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

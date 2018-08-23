@@ -2,21 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quit : MonoBehaviour {
+public static class Quit {
 
-	// Use this for initialization
-	void Start () {
-        //gameObject.SetActive(false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void QuitGame()
+    public static void QuitGame()
     {
-        Debug.Log("quit");
+        Debug.Log("Quitting game...");
         Application.Quit();
     }
 

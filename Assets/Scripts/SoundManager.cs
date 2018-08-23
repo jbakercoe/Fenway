@@ -6,17 +6,18 @@ using UnityEngine.UI;
 public class SoundManager : Singleton<SoundManager>
 {
     
-    [SerializeField] Sprite[] sprites;
+    [SerializeField]
+    List<Sprite> sprites;
     [SerializeField] GameObject buttonObject;
 
     private bool isMuted;
-    private int spriteOn = 0;
+    private int spriteIndex = 0;
     private Image buttonImage;
 
     public void startSounds()
     {
         isMuted = false;
-        spriteOn = 0;
+        spriteIndex = 0;
         AudioListener.volume = 1;
     }
 
@@ -37,8 +38,8 @@ public class SoundManager : Singleton<SoundManager>
     public void toggleSounds()
     {
         isMuted = !isMuted;
-        spriteOn = 1 - spriteOn;
-        buttonImage.sprite = sprites[spriteOn];
+        spriteIndex = 1 - spriteIndex;
+        buttonImage.sprite = sprites[spriteIndex];
         AudioListener.volume = isMuted ? 0 : 1;
     }
 }

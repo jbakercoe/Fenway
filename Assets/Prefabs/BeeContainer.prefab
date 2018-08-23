@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1780475496052578}
   m_IsPrefabParent: 1
+--- !u!1 &1004893004458670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4783713785269206}
+  m_Layer: 0
+  m_Name: Bee Flee Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1304203210445892
 GameObject:
   m_ObjectHideFlags: 0
@@ -20,8 +35,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4287309382609818}
   - component: {fileID: 212491681631851774}
+  - component: {fileID: 114152330036473154}
   - component: {fileID: 114365483623371440}
   - component: {fileID: 95349140247255556}
+  - component: {fileID: 114426352254354784}
   m_Layer: 0
   m_Name: Bee
   m_TagString: Untagged
@@ -38,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4212662577667486}
   - component: {fileID: 95119256542166830}
+  - component: {fileID: 114232748347271516}
   m_Layer: 0
   m_Name: BeeContainer
   m_TagString: Untagged
@@ -51,11 +69,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780475496052578}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.35, y: -0.27, z: -7.2734375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4287309382609818}
+  - {fileID: 4783713785269206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71,6 +90,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4212662577667486}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4783713785269206
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004893004458670}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.71, y: 14.39, z: 14.546875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4212662577667486}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &95119256542166830
 Animator:
@@ -106,6 +138,42 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114152330036473154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304203210445892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe25970698ed164fb716fcf1f2bdefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreScript: 1
+--- !u!114 &114232748347271516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1780475496052578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1297367e7cd3cc4cae5ad303b94243f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answers:
+  - bee
+  question: "Whoa! Something else is buzzing up there, too! It\u2019s a bug or a fly
+    with small wings and a fuzzy striped body. And its buzzing sure is loud! BZZZ!
+    BZZZ! Good thing Hattie\u2019s not here. She runs away when she sees one of these!
+    What do you think it is? "
+  options:
+  - Dandelion
+  - Butterfly
+  - Hummingbird
+  - Bee
+  items:
+  - {fileID: 114152330036473154}
 --- !u!114 &114365483623371440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animName: fly_away
+--- !u!114 &114426352254354784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304203210445892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86e0d5a491b5f742ac178368c7d4dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 4783713785269206}
 --- !u!212 &212491681631851774
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -127,6 +207,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -142,6 +223,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

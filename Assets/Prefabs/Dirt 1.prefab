@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4343224524169920}
   - component: {fileID: 212172465671652000}
+  - component: {fileID: 114970219550658254}
   - component: {fileID: 114409888446756496}
   m_Layer: 0
   m_Name: Dirt-carrot-cover
@@ -36,6 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4496142724436382}
+  - component: {fileID: 114255935844447276}
   m_Layer: 0
   m_Name: Dirt 1
   m_TagString: Untagged
@@ -52,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4040695891527408}
   - component: {fileID: 212250805891406064}
+  - component: {fileID: 114572768687403390}
   - component: {fileID: 114420630128135204}
   m_Layer: 0
   m_Name: Dirt
@@ -101,13 +104,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114255935844447276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259629896677338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1297367e7cd3cc4cae5ad303b94243f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  answers:
+  - dirt
+  - soil
+  question: "And over here, a patch of grass is missing. Sniff\u2026 sniff\u2026 The
+    ground smells earthy and fresh. It\u2019s soft and oh-so-fun to dig in! What is
+    it?"
+  options:
+  - Soil
+  - Rocks
+  - Rug
+  - Sand
+  items:
+  - {fileID: 114970219550658254}
+  - {fileID: 114572768687403390}
 --- !u!114 &114409888446756496
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095401487767884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4337592a5f5334045a4ca49c9253e8cc, type: 3}
   m_Name: 
@@ -120,13 +148,35 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897248324074648}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4337592a5f5334045a4ca49c9253e8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sortingName: Default
   sortingOrder: 2
+--- !u!114 &114572768687403390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897248324074648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe25970698ed164fb716fcf1f2bdefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114970219550658254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095401487767884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe25970698ed164fb716fcf1f2bdefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212172465671652000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -136,6 +186,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -151,14 +202,15 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingLayerID: -474271159
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: eb10ba70cbee4734a9cd7cf026396a34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,6 +230,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -193,6 +246,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -200,7 +254,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: db8b3cf5c3edca64fbf40dd124007b9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

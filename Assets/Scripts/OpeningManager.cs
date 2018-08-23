@@ -1,21 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class OpeningManager : Singleton<OpeningManager> {
+public class OpeningManager : MonoBehaviour {
 
     private bool hasLoaded;
-
-    private static bool isMultipleChoiceMode = false;
-
-    public static bool IsMultipleChoiceMode
-    {
-        get
-        {
-            return isMultipleChoiceMode;
-        }
-    }
 
     public bool HasLoaded
     {
@@ -25,17 +14,6 @@ public class OpeningManager : Singleton<OpeningManager> {
         }
     }
 
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     public void startScene()
     {
         hasLoaded = true;
@@ -43,18 +21,18 @@ public class OpeningManager : Singleton<OpeningManager> {
 
     public void nextScene()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneLoader.LoadScene(1);
     }
 
     public void multipleGuessMode()
     {
-        isMultipleChoiceMode = true;
+        GameModeInfo.isMultipleChoiceMode = true;
         nextScene();
     }
 
     public void typeMode()
     {
-        isMultipleChoiceMode = false;
+        GameModeInfo.isMultipleChoiceMode = false;
         nextScene();
     }
 

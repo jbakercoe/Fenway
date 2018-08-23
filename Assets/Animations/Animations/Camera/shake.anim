@@ -1817,22 +1817,15 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0
-    functionName: BreakSound
+  - time: 1.1333333
+    functionName: PlayBunnyTheme
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.65
-    functionName: flee
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 3.95
-    functionName: enterBunny1
+  - time: 1.95
+    functionName: NotifyCritters
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
